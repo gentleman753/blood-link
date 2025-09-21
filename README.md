@@ -105,6 +105,27 @@ Blood-Link is a comprehensive MERN (MongoDB, Express.js, React, Node.js) stack a
 └── server.js               # Main backend server file
 ```
 
+## Deployment
+
+### Backend Deployment
+To deploy the backend, you can use platforms like Heroku, Vercel, or a custom VPS.
+
+1.  **Environment Variables**: Ensure all necessary environment variables (`MONGO_URL`, `PORT`, `JWT_SECRET`) are configured in your deployment environment.
+2.  **Build Process**: For production, you might want to build the client and serve it statically from the Express server, or deploy the client separately.
+
+### Frontend Deployment
+To deploy the React frontend, you can use platforms like Netlify, Vercel, or GitHub Pages.
+
+1.  **Build the client application**:
+    ```bash
+    cd client
+    npm run build
+    ```
+    This will create a `build` folder in the `client` directory with the optimized production build.
+2.  **Serve the `build` folder**:
+    -   If deploying separately, configure your hosting service to serve the contents of the `client/build` directory.
+    -   If serving from the backend, you would typically copy the `client/build` contents to a `public` or `static` folder in your backend and configure Express to serve static files.
+
 ## Contribution
 Contributions are welcome! Please feel free to fork the repository, create a new branch, and submit a pull request.
 
